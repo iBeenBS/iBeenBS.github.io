@@ -1,0 +1,259 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 15px 40px;
+  z-index: 1000;
+  background: rgba(15, 20, 40, 0.5);
+  backdrop-filter: blur(8px);
+
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(10, 15, 30, 0.95);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.navigation {
+  background: transparent;
+  background-color: #1d1d1d;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(15, 20, 40, 0.65);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+  padding: 15px 40px;
+}
+
+.custom-button1 {
+  cursor: pointer;
+  font-family: fantasy;
+  transition: 0.3s ease-in-out;
+  
+  padding: 8px 20px;
+  border-radius: 50px; /* deixa redondo */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition: all 0.3s ease
+}
+
+.custom-button1:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 15px #585545;
+}
+
+.margem {
+  margin: 0px;
+}
+
+.custom-button:hover {
+   background: linear-gradient(
+    90deg,
+    #3a7bfd,
+    #6a5af9
+  );
+
+  box-shadow: 0 0 15px rgba(90, 100, 255, 0.6);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0b0f2a;
+
+  background-image: 
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(0, 180, 255, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(80, 0, 255, 0.2),
+      transparent 50%
+    ),
+    linear-gradient(
+      to right,
+      #070b1f 0%,
+      #0b0f2a 50%,
+      #070b1f 100%
+    );
+
+  background-attachment: fixed;
+}
+
+.title {
+  text-align: center;
+  color: #FF9A0D;
+  margin-top: 150px;
+}
+
+.title2 {
+  text-align: center;
+  color: #FFAE0D;
+  margin-top: -25px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.video {
+  border-radius: 15px;
+  display: block;
+  width: 700px;
+  height: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+.p {
+  margin-top: -15px;
+  text-align: center;
+}
+
+.p1 {
+  text-align: center;
+}
+
+#leds {
+  scroll-margin-top: 70px;
+}
+
+.slider {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(15, 20, 40, 0.6);
+  backdrop-filter: blur(8px);
+}
+
+.slide-track {
+  display: flex;
+  width: calc(250px * 8);
+  animation: scroll 15s linear infinite;
+}
+
+.slide-track img {
+  width: 250px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.faixa-container {
+  width: 100%;
+  margin: 80px 0;
+}
+
+.barra {
+  height: 4px;
+  background: linear-gradient(90deg, #3a7bfd, #6a5af9);
+  box-shadow: 0 0 15px rgba(90, 100, 255, 0.6);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+video {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 20px;
+}
+
+video {
+  display: block;
+  box-shadow: 0 0 40px rgba(90, 100, 255, 0.4);
+  margin: 0 auto;
+}
+
+.normal {
+  font-size: 60px;
+  font-weight: 700;
+  color: #1c1f26;
+  font-family: 'Inter', sans-serif;
+  margin-top: 0px;
+  letter-spacing: -1px;
+  padding: 0 5%;
+}
+
+.outline {
+  font-size: 60px;
+  font-weight: 700;
+  color: white; 
+  -webkit-text-stroke: 1px #6a5af9; 
+  font-family: sans-serif;
+  letter-spacing: -1px;
+  padding: 0 5%;
+  text-shadow: 0 0 15px #6a5af9;
+  display: block;
+  line-height: 1.05;
+}
+
+.neon {
+  color: #fff;
+  animation: brilho 2s infinite alternate;
+}
+
+@keyframes brilho {
+  from {
+    text-shadow:
+      0 0 5px #6a5af9,
+      0 0 10px #6a5af9,
+      0 0 20px #6a5af9;
+  }
+  to {
+    text-shadow:
+      0 0 10px #3a7bfd,
+      0 0 20px #3a7bfd,
+      0 0 40px #3a7bfd;
+  }
+}
+
+.space {
+  margin-top: 60px;
+  
+}
+
+h2 {
+  margin: 0;
+}
