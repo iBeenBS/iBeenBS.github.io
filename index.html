@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head class="margem">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <nav class="navigation">
+    <script>
+  window.addEventListener("scroll", function() {
+    const nav = document.querySelector("nav");
+
+    const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
+    const metade = alturaTotal / 2;
+
+    if (window.scrollY > metade) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
+    <a href="#leds"><button class="custom-button1">Conheça</button></a><a href="#onde"><button class="custom-button1">Onde</button></a><a href="#funcionalidade"><button class="custom-button1">Funcionalidade</button></a></nav>
+  
+</head>
+<body>
+  <div class="reveal">
+    
+    <script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (elementTop < windowHeight - revealPoint) {
+        element.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
+    
+    <script>
+  const video = document.getElementById("meuVideo");
+
+  video.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+</script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <div class="space">
+    <h2 class="normal neon">Micro:bit</h1>
+    <h2 class="outline">E suas Funções</h1>
+    </div>
+  <a id="leds"></a>
+  <h1 class="title">LEDS</h1>
+  <h1 class="title2">Micro:Bit</h1>
+  
+  
+  <video id="meuVideo" class="bg-video" controls autoplay muted loop>
+  <source src="VID-20260225-WA0005.mp4" type="video/mp4">
+</video>
+  <h3 class="p1"><strong>Explicação:</strong> linha 1</h3>
+  <h3 class="p">linha 2</h3>
+  <h3 class="p">linha 3</h3>
+  <h3 class="p">linha 4</h3>
+  
+  <a id="onde"></a>
+  <h1 class="title">LEDS</h1>
+  <h1 class="title2">Onde usar</h1>
+  <img class="video" src="https://i.imgur.com/FAla10y.jpeg">
+  <h3 class="p1"><strong>Explicação: </strong>linha 1</h3>
+  <h3 class="p">linha 2</h3>
+  <h3 class="p">linha 3</h3>
+  <h3 class="p">linha 4</h3>
+  
+  <a id="funcionalidade"></a>
+  <h1 class="title">LEDS</h1>
+  <h1 class="title2">Funcionalidade</h1>
+  <img class="video" src="https://i.imgur.com/FAla10y.jpeg">
+  <h3 class="p1"><strong>Explicação: </strong> linha 1</h3>
+  <h3 class="p">linha 2</h3>
+  <h3 class="p">linha 3</h3>
+  <h3 class="p">linha 4</h3>
+  
+  <div class="faixa-container">
+    <div class="barra"></div>
+  <div class="slider">
+  <div class="slide-track">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/JEMNPWh.png">
+    
+    <!-- duplicar imagens pra ficar infinito -->
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/JEMNPWh.png">
+  </div>
+</div>
+    <div class="barra"></div>
+  </div>
+  </div>
+</body>
+</html>
