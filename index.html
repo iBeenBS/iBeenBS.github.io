@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html>
+<head class="margem">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <nav class="navigation">
+    <script>
+  window.addEventListener("scroll", function() {
+    const nav = document.querySelector("nav");
+
+    const alturaTotal = document.documentElement.scrollHeight - window.innerHeight;
+    const metade = alturaTotal / 2;
+
+    if (window.scrollY > metade) {
+      nav.classList.add("scrolled");
+    } else {
+      nav.classList.remove("scrolled");
+    }
+  });
+</script>
+    <a href="#leds"><button class="custom-button1">Conheça</button></a><a href="#como"><button class="custom-button1">Como</button></a><a href="#funcionalidade"><button class="custom-button1">Funcionalidade</button></a></nav>
+  
+</head>
+<body>
+  <script src="script.js"></script>
+</body>
+  <div class="reveal"> 
+    <script>
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach((element) => {
+      const windowHeight = window.innerHeight;
+      const elementTop = element.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (elementTop < windowHeight - revealPoint) {
+        element.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  window.addEventListener("load", revealOnScroll);
+</script>
+    
+    <script>
+  const video = document.getElementById("meuVideo");
+
+  video.addEventListener("click", function () {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+</script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <div class="space">
+    <h2 class="normal neon">Micro:bit</h1>
+    <h2 class="outline">E suas Funções</h1>
+    </div>
+  <a id="leds"></a>
+  <h1 class="title">LEDS:</h1>
+  <h1 class="title2">O que é?</h1>
+  
+  
+  <video id="meuVideo" class="bg-video" controls autoplay muted loop>
+  <source src="VID-20260225-WA0005.mp4" type="video/mp4">
+</video>
+  <h3 class="p1"><strong class="destaque">Explicação:</strong> indicadores físicos: </h3>
+  <h3 class="p">led vermelho (verso): indica que a placa</h3>
+  <h3 class="p">está organizada (pilhas ou USB)</h3>
+  <h3 class="p">led amarelo (frente, v2): pisca durante a comunicação USB</h3>
+  
+  <a id="como"></a>
+  <h1 class="title">LEDS:</h1>
+  <h1 class="title2">Como usar</h1>
+  <img class="image" src="https://i.imgur.com/TBRkaJY.png">
+  <h3 class="p1"><strong class="destaque">Explicação: </strong>Para usar o micro:bit, basta </h3>
+  <h3 class="p">seguir os seguintes ciclos: Conectar, Programar e Arrastar.</h3>
+  <h3 class="p">Conecte e acesse: Ligue a placa ao PC via USB e edite via MakeCode.</h3>
+  <h3 class="p">Crie o código: Arraste os blocos com uma função e crie seu programa. Você</h3>
+    <h3 class="p">pode testar seu programa no navegador à esquerda.</h3>
+    <h3 class="p">Baixe e copie: Clique em download para gerar um arquivo .hex</h3>
+    <h3 class="p">e arraste-o para a unidade "MICROBIT".</h3>
+  
+  <a id="funcionalidade"></a>
+  <h1 class="title">LEDS:</h1>
+  <h1 class="title2">Funcionalidade</h1>
+  <img class="image" src="https://i.imgur.com/tMDln4m.jpeg">
+  <h3 class="p1"><strong class="destaque">Explicação: </strong></h3>
+  <h3 class="p">Permite cirar crachas animados,</h3>
+  <h3 class="p">corações e ícones personalizados.</h3>
+  <h3 class="p">Sensor de luz: Os próprios leds detectam</h3>
+    <h3 class="p">a luminosidade ambiente (ativa em MakeCode)</h3>
+    <h3 class="p">Programação simples: No MakeCode, você pode</h3>
+    <h3 class="p">plotar e apagar Leds específicos em cordenadas.</h3>
+  
+  <div class="faixa-container">
+    <div class="barra"></div>
+  <div class="slider">
+  <div class="slide-track">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/JEMNPWh.png">
+    
+    <!-- duplicar imagens pra ficar infinito -->
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/wRnD4lI.png">
+    <img src="https://i.imgur.com/sqZAkFM.png">
+    <img src="https://i.imgur.com/JEMNPWh.png">
+  </div>
+</div>
+    <div class="barra"></div>
+  </div>
+  </div>
+</body>
+</html>
